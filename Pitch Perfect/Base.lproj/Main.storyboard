@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -150,12 +150,12 @@
                                 <exclude reference="lej-ze-zOQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Xpe-Qh-9se"/>
                                 <exclude reference="192-N9-JVY"/>
                                 <exclude reference="6tn-gc-moZ"/>
                                 <exclude reference="IvV-qk-b2i"/>
                                 <exclude reference="SBi-Ks-o6f"/>
                                 <exclude reference="hKs-CN-bfp"/>
-                                <exclude reference="Xpe-Qh-9se"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -165,12 +165,12 @@
                                 <include reference="lej-ze-zOQ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Xpe-Qh-9se"/>
                                 <include reference="192-N9-JVY"/>
                                 <include reference="6tn-gc-moZ"/>
                                 <include reference="IvV-qk-b2i"/>
                                 <include reference="SBi-Ks-o6f"/>
                                 <include reference="hKs-CN-bfp"/>
-                                <include reference="Xpe-Qh-9se"/>
                             </mask>
                         </variation>
                     </view>
