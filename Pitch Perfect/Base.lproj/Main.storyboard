@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDM-Wf-OFu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDM-Wf-OFu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OVp-SP-oPf"/>
-                                    <segue destination="wzy-OH-Eb6" kind="show" id="j2C-pO-Rtg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,6 +87,7 @@
                         <outlet property="recordButton" destination="M0n-lX-wAb" id="kKJ-9f-h4j"/>
                         <outlet property="recordingInProgress" destination="YVc-KQ-eib" id="TjF-j8-Td9"/>
                         <outlet property="stopButton" destination="W5h-pK-Bne" id="aqp-g0-OU9"/>
+                        <segue destination="wzy-OH-Eb6" kind="show" identifier="stopRecording" id="UW3-Z4-bop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
