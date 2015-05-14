@@ -20,13 +20,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func viewWillAppear(animated: Bool) {
-        // Hide the stop button
+        super.viewWillAppear(animated)
         stopButton.hidden = true
         recordButton.enabled = true
     }
@@ -38,8 +33,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     // The IBAction (Interface Builder Action) tells that this function is linked to the storyboard.
     @IBAction func recordAudio(sender: UIButton) {
-        //TODO: Show text "recording in progress"
-        //TODO: Record the user's voice
 
         recordingInProgress.text = "Record in progress"
         stopButton.hidden = false

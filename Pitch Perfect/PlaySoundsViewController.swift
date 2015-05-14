@@ -33,43 +33,29 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.rate = 0.5
-        
-        // Resets audio playback to the beginning
-        audioPlayer.currentTime = 0
-        audioPlayer.play()
+        playAudioWithVariableRate(0.5)
         
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.rate = 1.5
+        playAudioWithVariableRate(1.5)
+    }
+    
+    @IBAction func stopAudio(sender: UIButton) {
+        stopAudioPlayback()
+    }
+    
+    func playAudioWithVariableRate(rate: Float) {
+        stopAudioPlayback()
+        audioPlayer.rate = rate
         
         // Resets audio playback to the beginning
         audioPlayer.currentTime = 0
         audioPlayer.play()
     }
-    @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
-    }
-    
-    @IBAction func playChipmunkAudio(sender: UIButton) {
-        playAudioWithVariablePitch(1000)
-    }
-    
-    @IBAction func playDarthvaderAudio(sender: UIButton) {
-        playAudioWithVariablePitch(-1000)
-    }
     
     func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlayback()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -86,4 +72,20 @@ class PlaySoundsViewController: UIViewController {
         
         audioPlayerNode.play()
     }
+    
+    func stopAudioPlayback() {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+    }
+    
+    @IBAction func playChipmunkAudio(sender: UIButton) {
+        playAudioWithVariablePitch(1000)
+    }
+    
+    @IBAction func playDarthvaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
+    }
+    
+    
 }
